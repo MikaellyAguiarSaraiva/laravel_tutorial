@@ -3,9 +3,13 @@
 namespace App\Repositories;
 
 use App\User;
+use App\Produto;
 
 class ProdutoRepository
 {
+	
+	protected $produto;
+	
 	/**
 	 * Get all of the produtos for a given user.
 	 *
@@ -18,4 +22,8 @@ class ProdutoRepository
 			->orderBy('created_at', 'asc')
 			->get();
 	}	
+	
+	public function find($id) {
+		return $this->produto->find($id);
+	}
 }

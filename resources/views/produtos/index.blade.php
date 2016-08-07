@@ -51,6 +51,7 @@
         				<thead>
         					<th>Produto</th>
         					<tr>&nbsp;</tr>
+        					<tr>&nbsp;</tr>
         				</thead>
         				
         				<tbody>
@@ -68,6 +69,17 @@
         									
         									<button type="submit" id="delete-produto-{{ $produto->id }}" class="btn btn-danger">
         										<i class="fa fa-btn fa-trash"></i> Delete
+        									</button>
+        								</form>
+        							</td>
+        							
+        							<td>	
+        								<form action="{{ url('produto/'.$produto->id) }}" method="GET">
+        									{{ csrf_field() }}
+<!--         									{{ method_field('GET') }} -->
+        									
+        									<button type="submit" id="show-produto-{{ $produto->id }}" class="btn btn-default">
+        										<i class="fa fa-pencil-square-o"></i> Edit
         									</button>
         								</form>
         							</td>

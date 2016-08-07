@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index');
 Route::get('/produtos', 'ProdutoController@index');
 Route::post('/produto', 'ProdutoController@store');
 Route::delete('/produto/{produto}', 'ProdutoController@destroy');
+Route::get('/produto/{produto}', 'ProdutoController@show');

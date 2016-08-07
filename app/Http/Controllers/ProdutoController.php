@@ -47,6 +47,12 @@ class ProdutoController extends Controller
 		]);
 	}
 	
+	public function show($id) {
+		return view('produto.index', [
+				'produto' => $this->produtos->find($id),
+		]);
+	}
+	
 	/**
 	 * Create a new produto.
 	 *
