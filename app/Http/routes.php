@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -17,19 +15,7 @@ use Illuminate\Http\Request;
  * Display All Produtos
  */
 Route::get('/', function () {
-   	return view('produtos');
+   	return view('welcome');
 });
 
-/**
- * Add A New Produto
- */
-Route::post('/produto', function(Request $request){
-	//
-});
 
-/**
- * Delete An Existing Produto
- */
-Route:delete('/produto/{id}', function($id) {
-	//
-});
