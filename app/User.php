@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Produto;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -23,4 +24,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    /**
+    * Get all of the tasks for the user.
+    */
+    public function produtos()
+    {
+    	return $this->hasMany(Produto::class);
+    }
 }
