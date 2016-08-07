@@ -11,11 +11,10 @@
 |
 */
 
-/**
- * Display All Produtos
- */
 Route::get('/', function () {
-   	return view('welcome');
+    return view('welcome');
 });
 
+Route::auth();
 
+Route::get('/home', 'HomeController@index');
