@@ -67,4 +67,20 @@ class ProdutoController extends Controller
 		
 		return redirect('/produtos');
 	}
+	
+	/**
+	 * Destroy the given task.
+	 *
+	 * @param  Request  $request
+	 * @param  Produto  $produto
+	 * @return Response
+	 */
+	public function destroy(Request $request, Produto $produto) {
+		
+		$this->authorize('destroy', $produto);
+		
+		$produto->delete();
+		
+		return redirect('/produtos');
+	}
 }
